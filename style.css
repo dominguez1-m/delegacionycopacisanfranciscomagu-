@@ -1,0 +1,256 @@
+/* Fondo general, color y tipo de letra*/
+body {
+  background: linear-gradient(#c3dae8,#f4dbe0,#c3dae8,#f4dbe0);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Encabezado */
+#logo-img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid pink;
+  border-radius: 10px;
+  transition: transform 0.5s, border-color 0.5s, border-width 0.5s;
+}
+
+#logo-img:hover {
+  transform: scale(1.2);
+  border-color: skyblue;
+}
+
+#logo-img:active {
+  border: 2px solid skyblue;
+}
+
+#encabezado {
+  text-align: center;
+  background: linear-gradient(to bottom, #dbeafe, #f0f4f8);
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+#titulo h1{
+  font-size: 18px;
+  color: #003366;
+  margin: 15px 0 5px;
+}
+#bienvenida {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Títulos secundarios y terciarios*/
+h2 {
+  font-size: 16px;
+  color: #005599;
+  margin-bottom: 10px;
+}
+h3{
+    font-size: 14px;
+}
+/* Menú de navegación general en todas las paginas*/
+#menu {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#menu a {
+  display: block;
+  padding: 5px 5px;
+  text-decoration: none;
+  background-color: #99bbcc;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 1px solid #004999;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+#menu a:hover {
+  background-color: #004999;
+}
+
+/* Estilo de secciones para todas las páginas*/
+section {
+  min-width: 260px;
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-block: 10px;
+}
+aside {
+  min-width: 200px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Línea del tiempo eventos (pagina pilrincipal) */
+#linea-tiempo {
+  margin-top: 10px;
+}
+#evento {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 4px solid #005599;
+  background-color: #eef5fb;
+  border-radius: 5px;
+}
+#fecha {
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 5px;
+}
+
+/* Pie de página general para todas las páginas*/
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/*Formulario de la pagina coméntarios*/
+form {
+ padding: 20px;
+ background-color: #eef5fb;
+ border: 1px solid #ddd;
+ border-radius: 10px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+ display: block;
+ margin-bottom: 10px;
+ font-weight: bold;
+}
+input[type="text"] {
+ width: 100%;
+ height: 100px;
+ margin-bottom: 20px;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+}
+select {
+ width: 100%;
+ height: 40px;
+ margin-bottom: 20px;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+}
+input[type="checkbox"] {
+ margin-right: 10px;
+}
+input[type="submit"]{
+ background-color: #004999;
+ color: #777;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+input[type="submit"]:hover {
+ background-color: #eef5fb;
+}
+
+/*Calendario dentro de la pagina contacto*/
+.eventos {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ border-left: 4px solid #005599;
+ background-color: #eef5fb;
+}
+.evento {
+ padding: 10px;
+ border-bottom: 1px solid #ccc;
+}
+.evento:last-child {
+ border-bottom: none;
+}
+.fecha {
+ font-weight: bold;
+ color: #666;
+}
+.descripcion {
+ color: #333;
+}
+/*Botones de registro, envio de comentarios y enlace a participación ciudadana*/
+#click,button{
+ background-color: #004999;
+ color: #777;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+#click :hover {
+ background-color: #eef5fb;
+}
+
+/* Responsividad para tablets y móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #titulo h1 {
+    font-size: 16px;
+  }
+
+  #bienvenida {
+    font-size: 13px;
+  }
+
+  #menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menu a {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  section, aside {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #contenedor {
+    padding: 0 10px;
+  }
+
+  form input[type="text"],
+  form select {
+    width: 100%;
+  }
+
+  #click,
+  button {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+
+  #logo-img {
+    max-width: 90%;
+  }
+
+  footer {
+    font-size: 11px;
+    padding: 5px;
+  }
+}
