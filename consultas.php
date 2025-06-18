@@ -41,17 +41,18 @@ $resultado = $conexion->query($sql);
         </tr>
 
         <?php while($fila = $resultado->fetch_assoc()) { ?>
-        <tr>
-            <td><?= $fila['id'] ?></td>
-            <td><?= $fila['nombre'] ?></td>
-            <td><?= $fila['barrio'] ?></td>
-            <td><?= $fila['edad'] ?></td>
-            <td><?= $fila['genero'] ?></td>
-            <td><?= $fila['conformidad'] ?></td>
-            <td><?= $fila['comentarios'] ?></td>
-            <td><?= $fila['fecha'] ?></td>
-        </tr>
-        <?php } ?>
+<tr>
+    <td><?= $fila['id'] ?></td>
+    <td><?= $fila['nombre'] ?></td>
+    <td><?= $fila['barrio'] ?></td>
+    <td><?= $fila['edad'] ?></td>
+    <td><?= $fila['genero'] ?></td>
+    <td><?= $fila['conformidad'] ?></td>
+    <td><?= $fila['comentarios'] ?></td>
+    <td><?= $fila['fecha'] ?></td>
+    <td><a href="eliminar.php?id=<?= $fila['id'] ?>" onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">Eliminar</a></td>
+</tr>
+<?php } ?>
     </table>
 </body>
 </html>
