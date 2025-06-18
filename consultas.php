@@ -49,8 +49,10 @@ $resultado = $conexion->query($sql);
     <td><?= $fila['genero'] ?></td>
     <td><?= $fila['conformidad'] ?></td>
     <td><?= $fila['comentarios'] ?></td>
-    <td><?= $fila['fecha'] ?></td>
-    <td><a href="eliminar.php?id=<?= $fila['id'] ?>" onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">Eliminar</a></td>
+    <td><?= $fila['fecha'] ?></td><td>
+  <a href="editar.php?id=<?= $fila['id'] ?>">Editar</a> |
+  <a href="eliminar.php?id=<?= $fila['id'] ?>" onclick="return confirm('¿Seguro que deseas eliminar este registro?')">Eliminar</a>
+    </td>
 </tr>
 <?php } ?>
     </table>
