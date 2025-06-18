@@ -1,5 +1,5 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "nombre_de_tu_base");
+$conexion = new mysqli("localhost", "root", "", "comentarios");
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM comentarios WHERE id = $id";
